@@ -146,8 +146,9 @@ ModelImporter:
     400138: transform8
     400140: transform9
     4300000: pCylinder6
-    7400000: Take 001
+    7400000: bite
     9500000: //RootNode
+    11100000: //RootNode
     13700000: pCylinder6
   materials:
     importMaterials: 1
@@ -162,9 +163,177 @@ ModelImporter:
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
-    animationWrapMode: 0
+    animationWrapMode: 2
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: bite
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 300
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Base
+        weight: 1
+      - path: Base/joint6
+        weight: 1
+      - path: Base/joint6/Stem1
+        weight: 1
+      - path: Base/joint6/Stem1/joint7
+        weight: 1
+      - path: Base/joint6/Stem1/joint8
+        weight: 1
+      - path: Base/joint6/Stem1/Stem2
+        weight: 1
+      - path: Base/joint6/Stem1/Stem2/HeadBase
+        weight: 1
+      - path: Base/joint6/Stem1/Stem2/HeadBase/joint5
+        weight: 1
+      - path: Base/joint6/Stem1/Stem2/HeadBase/joint5/HeadBack
+        weight: 1
+      - path: Base/joint6/Stem1/Stem2/HeadBase/joint5/HeadBack/Head_Back
+        weight: 1
+      - path: Base/joint6/Stem1/Stem2/HeadBase/joint5/HeadBack/HeadTop
+        weight: 1
+      - path: Base/joint6/Stem1/Stem2/HeadBase/Toungue1
+        weight: 1
+      - path: Base/joint6/Stem1/Stem2/HeadBase/Toungue1/Toungue2
+        weight: 1
+      - path: Base/joint6/Stem1/Stem2/HeadBase/Toungue1/Toungue2/Toungue3
+        weight: 1
+      - path: Base/joint6/Stem1/Stem2/HeadBase/Toungue1/Toungue2/Toungue3/Toungue4
+        weight: 1
+      - path: Base/joint6/Stem1/Stem2/HeadBase/Toungue1/Toungue2/Toungue3/Toungue4/ToungueTip
+        weight: 1
+      - path: curve1
+        weight: 1
+      - path: curve3
+        weight: 1
+      - path: group
+        weight: 1
+      - path: group1
+        weight: 1
+      - path: group1/pasted__Base
+        weight: 1
+      - path: pCone4
+        weight: 1
+      - path: pCone4/transform12
+        weight: 1
+      - path: pCone5
+        weight: 1
+      - path: pCone5/transform13
+        weight: 1
+      - path: pCone6
+        weight: 1
+      - path: pCone6/polySurface10
+        weight: 1
+      - path: pCone6/polySurface10/transform21
+        weight: 1
+      - path: pCone6/polySurface11
+        weight: 1
+      - path: pCone6/polySurface11/transform20
+        weight: 1
+      - path: pCone6/polySurface12
+        weight: 1
+      - path: pCone6/polySurface12/transform19
+        weight: 1
+      - path: pCone6/polySurface13
+        weight: 1
+      - path: pCone6/polySurface13/transform18
+        weight: 1
+      - path: pCone6/polySurface14
+        weight: 1
+      - path: pCone6/polySurface14/transform17
+        weight: 1
+      - path: pCone6/polySurface15
+        weight: 1
+      - path: pCone6/polySurface15/transform16
+        weight: 1
+      - path: pCone6/polySurface16
+        weight: 1
+      - path: pCone6/polySurface16/transform15
+        weight: 1
+      - path: pCone6/transform14
+        weight: 1
+      - path: pCube1
+        weight: 1
+      - path: pCube1/transform6
+        weight: 1
+      - path: pCylinder1
+        weight: 1
+      - path: pCylinder1/transform1
+        weight: 1
+      - path: pCylinder3
+        weight: 1
+      - path: pCylinder3/transform2
+        weight: 1
+      - path: pCylinder4
+        weight: 1
+      - path: pCylinder4/transform24
+        weight: 1
+      - path: pCylinder5
+        weight: 1
+      - path: pCylinder5/polySurface1
+        weight: 1
+      - path: pCylinder5/polySurface1/transform4
+        weight: 1
+      - path: pCylinder5/polySurface2 1
+        weight: 1
+      - path: pCylinder5/polySurface2 1/transform5
+        weight: 1
+      - path: pCylinder5/transform3
+        weight: 1
+      - path: pCylinder6
+        weight: 1
+      - path: polySurface2
+        weight: 1
+      - path: polySurface2/transform7
+        weight: 1
+      - path: polySurface4
+        weight: 1
+      - path: polySurface4/polySurface8 1
+        weight: 1
+      - path: polySurface4/polySurface8 1/transform10
+        weight: 1
+      - path: polySurface4/transform8
+        weight: 1
+      - path: polySurface5
+        weight: 1
+      - path: polySurface5/transform9
+        weight: 1
+      - path: polySurface8
+        weight: 1
+      - path: polySurface8/transform22
+        weight: 1
+      - path: polySurface17
+        weight: 1
+      - path: polySurface17/transform23
+        weight: 1
+      - path: pSphere1
+        weight: 1
+      - path: pSphere1/transform11
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -200,6 +369,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   additionalBone: 0
   userData: 
