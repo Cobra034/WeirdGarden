@@ -17,7 +17,9 @@ public class PlayerGUI : MonoBehaviour {
 	public Texture cupBlurred;
 	public Texture digereedo;
 	public Texture digereedoBlurred;
-	
+
+	public Texture redOverlay;
+
 	public bool inventoryOpen = false;
 
 	public bool paintingFound;
@@ -26,7 +28,11 @@ public class PlayerGUI : MonoBehaviour {
 	public bool cupFound;
 	public bool digereedoFound;
 
+	public bool redEffect = false;
+	public bool redOverlayStart = true;
+
 	public int objectCnt = 0;
+	public float timer = 30.0f;
 
 	public GameObject player;
 
@@ -53,12 +59,25 @@ public class PlayerGUI : MonoBehaviour {
 			else
 				inventoryOpen = false;
 		}
+		/*if(redOverlayStart){
+			redEffect = true;
+			timer -= Time.deltaTime;
+			print (timer);
+			if(timer <0){
+				redEffect = false;
+				redOverlayStart = false;
+			}
+		}*/
 	}
 
 	void OnGUI(){
 		Matrix4x4 svMat = GUI.matrix;
 		GUI.matrix = Matrix4x4.TRS(new Vector3(0,0,0), Quaternion.identity,new Vector3(Screen.width/1061f,Screen.height/597f,1f));
-		
+
+		GUI.DrawTexture(new Rect(1061/2-820, 597/2+130, 800,144), backpackBackground, ScaleMode.ScaleToFit);
+		GUI.DrawTexture(new Rect(1061/2-500, 597/2+125, 150, 150), backpack, ScaleMode.ScaleToFit);
+		GUI.Label(new Rect(1061/2-465, 597/2+160, 200, 200), objectCnt+"/5", ui);
+
 		if(inventoryOpen){
 			GUI.DrawTexture(new Rect(1061/2-335, 597/2+181, 500,100),backpackInventoryBar, ScaleMode.ScaleToFit);
 			GUI.DrawTexture(new Rect(1061/2-335, 597/2+180, 100,100), monaLisaBlurred, ScaleMode.ScaleToFit);
@@ -82,11 +101,9 @@ public class PlayerGUI : MonoBehaviour {
 				GUI.DrawTexture(new Rect(1061/2+30, 597/2+180, 100,100), digereedo, ScaleMode.ScaleToFit);
 			}
 		}
-	
-		GUI.DrawTexture(new Rect(1061/2-820, 597/2+130, 800,144), backpackBackground, ScaleMode.ScaleToFit);
-		GUI.DrawTexture(new Rect(1061/2-500, 597/2+125, 150, 150), backpack, ScaleMode.ScaleToFit);
-		GUI.Label(new Rect(1061/2-465, 597/2+160, 200, 200), objectCnt+"/5", ui);
-
+		if(redEffect){
+			GUI.DrawTexture(new Rect(0,0, 1061,597),redOverlay, ScaleMode.ScaleToFit);
+		}
 		GUI.matrix = svMat;
 	}
 }
