@@ -26,8 +26,4 @@ public class ObjectPickup : MonoBehaviour {
 			//Destroy(other.gameObject); //If only want to trigger once, use this line of code
 		}
 	}
-
-	void OnGUI(){
-		GUI.Label(new Rect(10, 10, 100, 20), objectCnt+"/5");
-	}
 }
