@@ -6,6 +6,12 @@ public class ObjectPickup : MonoBehaviour {
 	public int objectCnt = 0;
 	public GameObject camera;
 
+	public bool paintingFound = false;
+	public bool gloveFound = false;
+	public bool baconFound = false;
+	public bool cupFound = false;
+	public bool digereedoFound = false;
+
 	void Start(){
 		camera = GameObject.FindWithTag("MainCamera");
 	}
@@ -15,8 +21,38 @@ public class ObjectPickup : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
-		if(other.gameObject.tag == "Collect"){
+		/*if(other.gameObject.tag == "Collect"){
 			objectCnt++;
+			Debug.Log(objectCnt);
+			Destroy(other.gameObject);
+		}*/
+		if(other.gameObject.tag == "Painting"){
+			objectCnt++;
+			paintingFound = true;
+			Debug.Log(objectCnt);
+			Destroy(other.gameObject);
+		}
+		if(other.gameObject.tag == "Glove"){
+			objectCnt++;
+			gloveFound = true;
+			Debug.Log(objectCnt);
+			Destroy(other.gameObject);
+		}
+		if(other.gameObject.tag == "Bacon"){
+			objectCnt++;
+			baconFound = true;
+			Debug.Log(objectCnt);
+			Destroy(other.gameObject);
+		}
+		if(other.gameObject.tag == "Cup"){
+			objectCnt++;
+			cupFound = true;
+			Debug.Log(objectCnt);
+			Destroy(other.gameObject);
+		}
+		if(other.gameObject.tag == "Digereedo"){
+			objectCnt++;
+			digereedoFound = true;
 			Debug.Log(objectCnt);
 			Destroy(other.gameObject);
 		}
