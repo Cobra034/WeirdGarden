@@ -38,7 +38,7 @@ public class ObjectPickup : MonoBehaviour {
 			if(timer <0){
 				cameraFlip = false;
 				camera.GetComponent<Animation>().Play("CameraFlip2");
-				timer = 15.0;
+				timer = 15.0f;
 			}
 		}
 	}

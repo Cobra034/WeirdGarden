@@ -42,6 +42,8 @@ public class PlayerGUI : MonoBehaviour {
 		player = GameObject.FindWithTag("Player");
 		redOverlay = GameObject.FindWithTag("RedOverlay");
 		redOverlay.gameObject.SetActive(false);
+
+		Screen.showCursor = false;
 	}
 	
 	// Update is called once per frame
@@ -70,7 +72,7 @@ public class PlayerGUI : MonoBehaviour {
 				redEffect = false;
 				player.GetComponent<ObjectPickup>().redEffect = false;
 				redOverlay.gameObject.SetActive(false);
-				timer = 30.0;
+				timer = 30.0f;
 			}
 		}
 	}
