@@ -10,6 +10,12 @@ TagManager:
   - Bacon
   - Cup
   - Digereedo
+  - BushEntrance
+  - BushExit
+  - EntranceTrigger
+  - RedEffectTrigger
+  - RedOverlay
+  - CameraFlip
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

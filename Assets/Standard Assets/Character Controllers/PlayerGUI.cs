@@ -18,8 +18,6 @@ public class PlayerGUI : MonoBehaviour {
 	public Texture digereedo;
 	public Texture digereedoBlurred;
 
-	public Texture redOverlay;
-
 	public bool inventoryOpen = false;
 
 	public bool paintingFound;
@@ -29,18 +27,21 @@ public class PlayerGUI : MonoBehaviour {
 	public bool digereedoFound;
 
 	public bool redEffect = false;
-	public bool redOverlayStart = true;
+	public bool redScreen = false;
 
-	public int objectCnt = 0;
+	public int objectCnt;
 	public float timer = 30.0f;
 
 	public GameObject player;
+	public GameObject redOverlay;
 
 	public GUIStyle ui;
 	
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindWithTag("Player");
+		redOverlay = GameObject.FindWithTag("RedOverlay");
+		redOverlay.gameObject.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -52,6 +53,8 @@ public class PlayerGUI : MonoBehaviour {
 		cupFound = player.GetComponent<ObjectPickup>().cupFound;
 		digereedoFound = player.GetComponent<ObjectPickup>().digereedoFound;
 
+		redEffect = player.GetComponent<ObjectPickup>().redEffect;
+
 		if(Input.GetKeyDown(KeyCode.Tab)){
 			print ("Key pressed");
 			if (!inventoryOpen)
@@ -59,15 +62,16 @@ public class PlayerGUI : MonoBehaviour {
 			else
 				inventoryOpen = false;
 		}
-		/*if(redOverlayStart){
-			redEffect = true;
+		if(redEffect){
+			redOverlay.gameObject.SetActive(true);
 			timer -= Time.deltaTime;
 			print (timer);
 			if(timer <0){
 				redEffect = false;
-				redOverlayStart = false;
+				player.GetComponent<ObjectPickup>().redEffect = false;
+				redOverlay.gameObject.SetActive(false);
 			}
-		}*/
+		}
 	}
 
 	void OnGUI(){
@@ -100,9 +104,6 @@ public class PlayerGUI : MonoBehaviour {
 			if(digereedoFound){
 				GUI.DrawTexture(new Rect(1061/2+30, 597/2+180, 100,100), digereedo, ScaleMode.ScaleToFit);
 			}
-		}
-		if(redEffect){
-			GUI.DrawTexture(new Rect(0,0, 1061,597),redOverlay, ScaleMode.ScaleToFit);
 		}
 		GUI.matrix = svMat;
 	}
