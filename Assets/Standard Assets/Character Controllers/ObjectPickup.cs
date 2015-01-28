@@ -8,10 +8,6 @@ public class ObjectPickup : MonoBehaviour {
 	public GameObject entrance;
 	public GameObject exit;
 
-	/*public AnimationClip cameraRotate;
-	public AnimationClip cameraFlip1;
-	public AnimationClip cameraFlip2;*/
-	
 	public bool paintingFound = false;
 	public bool gloveFound = false;
 	public bool baconFound = false;
@@ -42,6 +38,7 @@ public class ObjectPickup : MonoBehaviour {
 			if(timer <0){
 				cameraFlip = false;
 				camera.GetComponent<Animation>().Play("CameraFlip2");
+				timer = 15.0;
 			}
 		}
 	}

@@ -70,6 +70,7 @@ public class PlayerGUI : MonoBehaviour {
 				redEffect = false;
 				player.GetComponent<ObjectPickup>().redEffect = false;
 				redOverlay.gameObject.SetActive(false);
+				timer = 30.0;
 			}
 		}
 	}
